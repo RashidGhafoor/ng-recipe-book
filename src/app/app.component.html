@@ -1,5 +1,11 @@
-<app-header></app-header>
-
+<app-header (featcherClick)="onFeatcherClick($event)"></app-header>
 <div class="container">
-  <h1>App Component</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf="featcherClicked === 'recipe'"></app-recipes>
+      <app-shopping-list
+        *ngIf="featcherClicked !== 'recipe'"
+      ></app-shopping-list>
+    </div>
+  </div>
 </div>
