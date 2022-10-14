@@ -8,19 +8,22 @@ export class RecipeService {
   private recipes: Recipe[] = [
     new Recipe(
       'Big Fat Burger',
-      'how to make a burger',
-      'https://www.healthbenefitstimes.com/glossary/wp-content/uploads/2020/08/Recipe.jpg',
+      'How to make a jumbo burger?',
+      'http://www.fatburgercanada.com/wp-content/uploads/2015/07/fatburger_0002_DoubleKing-685x802.png',
       [new Ingredient('Bread', 2), new Ingredient('Meat', 1)]
     ),
     new Recipe(
-      'Tea Recipe',
-      'how to make a tea',
-      'https://www.healthbenefitstimes.com/glossary/wp-content/uploads/2020/08/Recipe.jpg',
+      'Tasty Pizza',
+      'What else can you say!!!',
+      'https://www.freeiconspng.com/uploads/pizza-png-22.png',
       [new Ingredient('Milk', 1), new Ingredient('Tea leaves', 10)]
     ),
   ];
 
   getRecipies() {
     return this.recipes.slice();
+  }
+  getRecipe(id: number): Recipe {
+    return this.recipes[id];
   }
 }

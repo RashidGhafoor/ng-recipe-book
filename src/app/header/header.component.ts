@@ -6,13 +6,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  @Output() featcherClick = new EventEmitter<string>();
+  // @Output() featcherClick = new EventEmitter<string>();
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  onFeatcherClick(featcher: string) {
-    this.featcherClick.emit(featcher);
-  }
+  // onFeatcherClick(featcher: string) {
+  //   this.featcherClick.emit(featcher);
+  // }
 }
