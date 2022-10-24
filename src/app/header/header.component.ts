@@ -1,3 +1,4 @@
+import { DataStorageService } from './../services/data-storage.service';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -8,11 +9,18 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class HeaderComponent implements OnInit {
   // @Output() featcherClick = new EventEmitter<string>();
 
-  constructor() {}
+  constructor(private storageService: DataStorageService) {}
 
   ngOnInit(): void {}
 
   // onFeatcherClick(featcher: string) {
   //   this.featcherClick.emit(featcher);
   // }
+
+  onSaveData() {
+    this.storageService.storeRecipies();
+  }
+  onFetchData() {
+    this.storageService.fetchRecipies();
+  }
 }
